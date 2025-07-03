@@ -1,0 +1,225 @@
+/* Pink pastel menyala theme */
+:root {
+    --pink-main: #ffb6c1;
+    --pink-bright: #ff69b4;
+    --white: #fff;
+    --gray: #f7f7f7;
+    --text-dark: #333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--gray);
+    color: var(--text-dark);
+}
+
+header {
+    background: linear-gradient(90deg, var(--pink-main) 60%, var(--pink-bright) 100%);
+    color: var(--white);
+    padding: 2rem 0 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255,182,193,0.15);
+}
+
+.container {
+    width: 92%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 16px rgba(255,105,180,0.2);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+section {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(255,182,193,0.10);
+    padding: 1.5rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Tambahan jarak khusus antara Tentang Saya dan Informasi Kontak */
+.about {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    color: var(--pink-bright);
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+a {
+    color: var(--pink-bright);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--pink-main);
+    text-decoration: underline;
+}
+
+footer {
+    background: var(--pink-main);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-radius: 18px 18px 0 0;
+}
+
+/* Tambahan agar konten tetap proporsional di desktop besar */
+@media (min-width: 900px) {
+    .container {
+        max-width: 850px;
+        width: 85%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+        width: 75%;
+    }
+    h1 {
+        font-size: 2.8rem;
+    }
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+    section {
+        padding: 2rem 2.5rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 98%;
+        padding: 0 0.5rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 1rem 0.5rem;
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+    .tagline {
+        font-size: 0.95rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    p, li {
+        font-size: 0.98rem;
+    }
+}
+
+/* Form Kontak & Pesan */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 1rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.contact-form label {
+    font-weight: 500;
+    color: var(--pink-bright);
+    margin-bottom: 0.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--pink-main);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fff6fa;
+    resize: none;
+    transition: border 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid var(--pink-bright);
+    background: #fff0f7;
+}
+.contact-form button {
+    background: linear-gradient(90deg, var(--pink-bright), var(--pink-main));
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255,182,193,0.13);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+}
+.contact-form button:hover {
+    background: linear-gradient(90deg, var(--pink-main), var(--pink-bright));
+    transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.97rem;
+        padding: 0.6rem 0.7rem;
+    }
+    .contact-form button {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+    }
+}
+
+.info {
+    margin-bottom: 2.5rem;
+}
